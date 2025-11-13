@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_FDZ_WORKSPACE</name>
+    <author>FDZ-Gesundheit</author>
+    <creationDate>2024</creationDate>
+    <copyright>Copyright (C) 2024 FDZ-Gesundheit. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>support@fdz-gesundheit.de</authorEmail>
+    <authorUrl>https://fdz-gesundheit.de</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_FDZ_WORKSPACE_XML_DESCRIPTION</description>
+
+    <files>
+        <filename module="mod_fdz_workspace">mod_fdz_workspace.php</filename>
+        <folder>tmpl</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="workspace_url"
+                    type="url"
+                    label="MOD_FDZ_WORKSPACE_WORKSPACE_URL_LABEL"
+                    description="MOD_FDZ_WORKSPACE_WORKSPACE_URL_DESC"
+                    default="https://ihre-nextjs-domain.de"
+                    required="true"
+                />
+                
+                <field
+                    name="iframe_height"
+                    type="number"
+                    label="MOD_FDZ_WORKSPACE_IFRAME_HEIGHT_LABEL"
+                    description="MOD_FDZ_WORKSPACE_IFRAME_HEIGHT_DESC"
+                    default="1200"
+                    min="400"
+                    max="2000"
+                />
+                
+                <field
+                    name="show_title"
+                    type="radio"
+                    label="MOD_FDZ_WORKSPACE_SHOW_TITLE_LABEL"
+                    description="MOD_FDZ_WORKSPACE_SHOW_TITLE_DESC"
+                    default="1"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
+
+
